@@ -110,14 +110,10 @@
 }
 
 .header ul li.sobre-menu {
-    border-bottom: 4px solid white;
     transition: all ease-in-out 0.2s;
 }
 
-.header ul li.sobre-menu:hover {
-    border-bottom: 4px solid #ad1616;
-    border-radius: 10px;
-}
+.header ul li.sobre-menu:hover {}
 
 .header ul li ul {
     position: absolute;
@@ -156,3 +152,19 @@
 .header ul li ul.onDisplay {
     display: block;
 }
+
+.informativo {
+    display: flex;
+    margin: 0 auto;
+    width: 85%;
+    height: 400px;
+    margin-top: 10px;
+    border: solid 2px rgb(19, 18, 18);
+}
+
+.inf {
+    width: 100%;
+    height: 100%;
+}
+
+.inf#cursos {}
