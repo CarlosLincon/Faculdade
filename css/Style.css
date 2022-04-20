@@ -21,10 +21,12 @@
 
 .header .logo-menu {
     width: 80%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 #IMG {
@@ -33,6 +35,25 @@
 
 #IMG img {
     height: 100px;
+}
+
+.aluno {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aluno button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.aluno a {
+    color: #020c13;
 }
 
 #msg h1 {
@@ -112,8 +133,6 @@
 .header ul li.sobre-menu {
     transition: all ease-in-out 0.2s;
 }
-
-.header ul li.sobre-menu:hover {}
 
 .header ul li ul {
     position: absolute;
