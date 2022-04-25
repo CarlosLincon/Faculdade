@@ -10,6 +10,15 @@ const institucionalUl = document.getElementById("InstitucionalUl");
 const menuOff = document.getElementsByClassName("menuOFF");
 const element = document.getElementsByClassName("container-menu");
 const rect = element[0].getBoundingClientRect();
+const img = document.getElementById("IMG");
+const alunoMenu = document.getElementById("aluno-header");
+
+window.onload = function() {
+    img.classList.add("transformOp");
+    alunoMenu.classList.add("transformOp");
+};
+
+
 
 //menu effects
 graduaçãoLi.addEventListener("mouseover", () => {

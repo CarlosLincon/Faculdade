@@ -21,7 +21,7 @@
 
 .header .logo-menu {
     width: 80%;
-    height: auto;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -30,46 +30,117 @@
 }
 
 #IMG {
+    opacity: 0;
     padding: 10px;
 }
 
 #IMG img {
-    height: 100px;
+    height: 75px;
 }
 
-.aluno {
-    width: 100px;
-    height: 100px;
+.aluno#aluno-header {
+    opacity: 0;
+    width: 155px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: 0.2s all ease-in-out;
 }
 
-.aluno button {
+#IMG.transformOp,
+.aluno#aluno-header.transformOp {
+    opacity: 1;
+}
+
+.aluno#aluno-header:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient( to right, #f6f7f8 0%, #f6f7f8 10%, #f6f7f8 20%, #ffffff 100%);
+    background-size: 200% 100%;
+    animation: bgPos 1s ease-in-out;
+}
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: -150% 0;
+    }
+}
+
+.aluno#aluno-header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.aluno#aluno-header a {
+    color: #0b0968;
+}
+
+.aluno#aluno-header p {
+    width: auto;
+    margin: 0 5px 0 15px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /* background-color: #0d09ce; */
+    color: #000000;
+    font-family: 'Source Serif Pro', serif;
+    padding-right: 10px;
+    border-right: 1px solid rgb(14, 9, 88);
+    color: #0b0968;
+    font-size: 17px;
+}
+
+.aluno#aluno-menu {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    transition: translate ease-in-out 2s;
+}
+
+.aluno#aluno-menu button {
     background: transparent;
     border: 0;
     cursor: pointer;
     font-size: 24px;
 }
 
-.aluno a {
-    color: #020c13;
+.aluno#aluno-menu a {
+    color: #f5f5f5;
 }
 
-#msg h1 {
-    font-size: 25px;
-    margin: 80px 80px 0 0;
-    font-family: 'whisper', cursive;
-    color: rgb(60, 0, 109);
+.aluno#aluno-menu p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.container-menu#fixed .aluno#aluno-menu {
+    display: flex;
 }
 
 .container-menu {
     transition: width 0.2s;
     margin: 0 auto;
     display: flex;
-    width: 80%;
-    height: 55px;
+    width: 100%;
+    height: 75px;
     background-image: linear-gradient(to right, #002c5f, #0c5bb6, #002c5f);
+    transition: all 1s ease-in-out;
 }
 
 .container-menu#fixed {
@@ -78,14 +149,6 @@
     z-index: 99;
     transition: all 0.6s;
     width: 100%;
-}
-
-.header .container-menu#fixed ul a img {
-    transform: translateX(50px);
-}
-
-.header .container-menu#fixed ul a img:hover {
-    transform: translateX(50px) scale(1.2);
 }
 
 .header ul {
@@ -100,10 +163,33 @@
 .header ul li {
     list-style: none;
     display: flex;
-    margin-left: 55px;
     width: 150px;
     justify-content: center;
-    transform: translateX(-40px);
+    margin-left: 50px;
+    padding: 0;
+}
+
+.header ul li.img-menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.header ul li.img-menu img {
+    width: 150px;
+    height: 50px;
+}
+
+.header .container-menu#fixed ul li.img-menu {
+    display: flex;
+}
+
+.header .container-menu#fixed ul li {
+    width: 100px;
+}
+
+.header .container-menu#fixed ul li:nth-child(1) {
+    margin-left: 50px;
 }
 
 .header ul a img {
@@ -112,11 +198,6 @@
 
 .header ul a img:hover {
     transform: scale(1.2);
-}
-
-#home {
-    transform: translateX(0);
-    margin-left: 0;
 }
 
 .header ul li a {
@@ -154,6 +235,10 @@
     border-bottom: 1px #53a5dd solid;
     transition: all 0.3s ease-in-out;
     transform: translateX(0);
+}
+
+.header ul li#home {
+    margin: 0;
 }
 
 .header ul li ul li a {
