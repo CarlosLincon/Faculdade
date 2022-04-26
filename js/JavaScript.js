@@ -7,20 +7,25 @@ const academicoUl = document.getElementById("AcademicoUl");
 const institucionalDiv = document.getElementById("InstitucionalDiv");
 const institucionalLi = document.getElementById("InstitucionalLi");
 const institucionalUl = document.getElementById("InstitucionalUl");
+const setaEsquerda = document.getElementById("seta-esquerda");
+const setaDireita = document.getElementById("seta-direita");
+const slideDestaque = document.getElementById("slide-destaque");
+const slideEsquerda = document.getElementById("slide-anterior");
+const slideDireita = document.getElementById("slide-posterior");
+
 const menuOff = document.getElementsByClassName("menuOFF");
 const element = document.getElementsByClassName("container-menu");
 const rect = element[0].getBoundingClientRect();
 const img = document.getElementById("IMG");
 const alunoMenu = document.getElementById("aluno-header");
+var contadorDeClik = 1;
 
+//menu effects
 window.onload = function() {
     img.classList.add("transformOp");
     alunoMenu.classList.add("transformOp");
 };
 
-
-
-//menu effects
 graduaçãoLi.addEventListener("mouseover", () => {
     graduaçãoUl.classList.add("onDisplay");
     academicoUl.classList.remove("onDisplay");
@@ -47,23 +52,42 @@ institucionalLi.addEventListener("mouseover", () => {
 institucionalDiv.addEventListener("mouseout", () => {
     institucionalUl.classList.remove("onDisplay");
 });
-// end menu
 
 window.addEventListener("scroll", () => {
     var y = window.scrollY;
-    if (y >= 140) {
+    if (y >= 90) {
         element[0].id = "fixed";
-    } else if (y < 140) {
+    } else if (y < 90) {
         element[0].id = " ";
     }
 });
 
 for (var i = 0; i < menuOff.length; i++) {
-    console.log("asda");
     menuOff[i].addEventListener("mouseout", () => {
-
         institucionalUl.classList.remove("onDisplay");
         academicoUl.classList.remove("onDisplay");
         graduaçãoUl.classList.remove("onDisplay");
     });
 }
+
+// end menu
+
+//Slide-Informativo
+
+setaEsquerda.addEventListener("click", () => {
+    contadorDeClik--;
+    if (contadorDeClik < 0) {
+        contadorDeClik = 0;
+    }
+});
+
+setaDireita.addEventListener("click", () => {
+    contadorDeClik++;
+    let contadorAnt = contadorDeClik--;
+    let contadorPost = contadorDeClik++;
+    console.log(contadorDeClik);
+    slideDestaque.setAttribute("src", `Images/Slide/SlideInformativo(${contadorDeClik}).webp`);
+    slideEsquerda.setAttribute("src", `Images/Slide/SlideInformativo(${contadorAnt}).webp`);
+    slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);
+
+})

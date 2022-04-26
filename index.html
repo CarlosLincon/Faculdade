@@ -15,7 +15,7 @@
     <div class="header">
         <div class="logo-menu">
             <div class=" " id="IMG">
-                <img src="Images/Faculdade_Positivo_color.png" alt="">
+                <img src="Images/Menu/Faculdade_Positivo_color.png" alt="">
             </div>
             <!--  <div id="msg">
                 <h1>#Santíssimo sempre com você! </h1>
@@ -34,13 +34,15 @@
         <div class="container-menu">
             <ul id="primeiro">
                 <li class="img-menu">
-                    <img src="Images/Faculdade Fundo Branco.png" alt="">
+                    <img src="Images/Menu/Faculdade Fundo Branco.png" alt="">
                 </li>
                 <li class="menuOFF" id="home"><a href="#">Home</a></li>
                 <li class="sobre-menu" id="GraduaçãoLi"><a href="#">Graduação</a>
+                    <i class="fa-solid fa-chevron-down"></i>
                     <div id="GraduaçãoDiv">
                         <ul id="GraduaçãoUl">
-                            <li><a href="#">Administração</a></li>
+                            <li><a href="#">Administração</a>
+                            </li>
                             <li><a href="#">Ciências Contábeis</a></li>
                             <li><a href="#">Direito</a></li>
                             <li><a href="#">Enfermagem</a></li>
@@ -52,8 +54,9 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menuOFF"><a href="#">Pós-Graduação</a></li>
+                <li class="menuOFF" id="pos-gra"><a href="#">Pós-Graduação</a></li>
                 <li class="sobre-menu" id="AcademicoLi"><a href="#">Acadêmico</a>
+                    <i class="fa-solid fa-chevron-down"></i>
                     <div id="AcademicoDiv">
                         <ul id="AcademicoUl">
                             <li><a href="#">Extensão</a></li>
@@ -72,6 +75,7 @@
                     </div>
                 </li>
                 <li class="sobre-menu" id="InstitucionalLi"><a href="#">Institucional</a>
+                    <i class="fa-solid fa-chevron-down"></i>
                     <div id="InstitucionalDiv">
                         <ul id="InstitucionalUl">
                             <li><a href="faculdade.php">A Faculdade</a></li>
@@ -103,9 +107,17 @@
     </div>
 
     <div class="informativo">
-        <div class="inf" id="bolsa"></div>
-        <div class="inf" id="cursos"></div>
-        <div class="inf" id="sobre"></div>
+        <div id="slide-esquerda">
+            <img id="slide-anterior" src=" " alt="">
+        </div>
+        <div id="slide-principal">
+            <div id="seta-esquerda"><i class="fa-solid fa-circle-arrow-left"></i></div>
+            <div> <img id="slide-destaque" src="Images/Slide/SlideInformativo(1).webp" alt=""></div>
+            <div id="seta-direita"><i class="fa-solid fa-circle-arrow-right"></i></div>
+        </div>
+        <div id="slide-direita">
+            <img id="slide-posterior" src="Images/Slide/SlideInformativo(2).webp" alt="">
+        </div>
     </div>
 
     <div class="container" id="texto">
