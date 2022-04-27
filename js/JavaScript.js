@@ -18,7 +18,9 @@ const element = document.getElementsByClassName("container-menu");
 const rect = element[0].getBoundingClientRect();
 const img = document.getElementById("IMG");
 const alunoMenu = document.getElementById("aluno-header");
-var contadorDeClik = 1;
+var contadorDeClik = 1,
+    contadorAnt = 0,
+    contadorPost = 2;
 
 //menu effects
 window.onload = function() {
@@ -83,9 +85,8 @@ setaEsquerda.addEventListener("click", () => {
 
 setaDireita.addEventListener("click", () => {
     contadorDeClik++;
-    let contadorAnt = contadorDeClik--;
-    let contadorPost = contadorDeClik++;
-    console.log(contadorDeClik);
+    contadorAnt++;
+    contadorPost++;
     slideDestaque.setAttribute("src", `Images/Slide/SlideInformativo(${contadorDeClik}).webp`);
     slideEsquerda.setAttribute("src", `Images/Slide/SlideInformativo(${contadorAnt}).webp`);
     slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);

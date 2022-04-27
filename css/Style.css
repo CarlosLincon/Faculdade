@@ -319,10 +319,9 @@ body {
 
 .informativo {
     display: flex;
-    margin: 0 auto;
+    margin: 60px auto;
     width: 1200px;
     height: 500px;
-    margin-top: 10px;
     justify-content: center;
     align-items: center;
 }
