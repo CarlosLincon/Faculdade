@@ -78,9 +78,28 @@ for (var i = 0; i < menuOff.length; i++) {
 
 setaEsquerda.addEventListener("click", () => {
     contadorDeClik--;
-    if (contadorDeClik < 0) {
-        contadorDeClik = 0;
+    console.log(contadorDeClik);
+    if (contadorDeClik < 1) {
+        contadorDeClik = 1;
+        console.log(contadorDeClik);
     }
+    contadorAnt--;
+    console.log(contadorAnt);
+    if (contadorAnt === -1) {
+        contadorAnt = 0;
+        console.log(contadorAnt);
+    }
+    contadorPost--;
+    console.log(contadorPost);
+    if (contadorPost < 2) {
+        contadorPost = 2;
+        console.log(contadorPost);
+    }
+
+    slideDestaque.setAttribute("src", `Images/Slide/SlideInformativo(${contadorDeClik}).webp`);
+    slideEsquerda.setAttribute("src", `Images/Slide/SlideInformativo(${contadorAnt}).webp`);
+    slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);
+
 });
 
 setaDireita.addEventListener("click", () => {
@@ -92,3 +111,7 @@ setaDireita.addEventListener("click", () => {
     slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);
 
 })
+
+
+
+function test
