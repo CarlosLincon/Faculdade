@@ -9,7 +9,8 @@ const institucionalLi = document.getElementById("InstitucionalLi");
 const institucionalUl = document.getElementById("InstitucionalUl");
 const setaEsquerda = document.getElementById("seta-esquerda");
 const setaDireita = document.getElementById("seta-direita");
-const slideDestaque = document.getElementById("slide-destaque");
+const DivSlide1 = document.getElementById("slidePrincipal");
+const DivSlide2 = document.getElementById("slideEmEspera");
 const slideEsquerda = document.getElementById("slide-anterior");
 const slideDireita = document.getElementById("slide-posterior");
 
@@ -18,9 +19,26 @@ const element = document.getElementsByClassName("container-menu");
 const rect = element[0].getBoundingClientRect();
 const img = document.getElementById("IMG");
 const alunoMenu = document.getElementById("aluno-header");
-var contadorDeClik = 1,
-    contadorAnt = 0,
-    contadorPost = 2;
+
+
+setTimeout(function() {
+    DivSlide1.classList.add("transformSlide");
+}, 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //menu effects
 window.onload = function() {
@@ -75,43 +93,3 @@ for (var i = 0; i < menuOff.length; i++) {
 // end menu
 
 //Slide-Informativo
-
-setaEsquerda.addEventListener("click", () => {
-    contadorDeClik--;
-    console.log(contadorDeClik);
-    if (contadorDeClik < 1) {
-        contadorDeClik = 1;
-        console.log(contadorDeClik);
-    }
-    contadorAnt--;
-    console.log(contadorAnt);
-    if (contadorAnt === -1) {
-        contadorAnt = 0;
-        console.log(contadorAnt);
-    }
-    contadorPost--;
-    console.log(contadorPost);
-    if (contadorPost < 2) {
-        contadorPost = 2;
-        console.log(contadorPost);
-    }
-
-    slideDestaque.setAttribute("src", `Images/Slide/SlideInformativo(${contadorDeClik}).webp`);
-    slideEsquerda.setAttribute("src", `Images/Slide/SlideInformativo(${contadorAnt}).webp`);
-    slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);
-
-});
-
-setaDireita.addEventListener("click", () => {
-    contadorDeClik++;
-    contadorAnt++;
-    contadorPost++;
-    slideDestaque.setAttribute("src", `Images/Slide/SlideInformativo(${contadorDeClik}).webp`);
-    slideEsquerda.setAttribute("src", `Images/Slide/SlideInformativo(${contadorAnt}).webp`);
-    slideDireita.setAttribute("src", `Images/Slide/SlideInformativo(${contadorPost}).webp`);
-
-})
-
-
-
-function test
