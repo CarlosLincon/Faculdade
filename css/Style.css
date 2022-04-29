@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #f1f1f1;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -43,7 +43,7 @@ body {
 }
 
 .container#texto {
-    margin-top: 60px
+    margin-top: 60px;
 }
 
 .header {
@@ -97,15 +97,6 @@ body {
     animation: bgPos 1s ease-in-out;
 }
 
-@keyframes bgPos {
-    0% {
-        background-position: 50% 0;
-    }
-    100% {
-        background-position: -150% 0;
-    }
-}
-
 .aluno#aluno-header button {
     background: transparent;
     border: 0;
@@ -126,7 +117,7 @@ body {
     line-height: 30px;
     /* background-color: #0d09ce; */
     color: #000000;
-    font-family: 'Source Serif Pro', serif;
+    font-family: "Source Serif Pro", serif;
     padding-right: 10px;
     border-right: 1px solid rgb(14, 9, 88);
     color: #0b0968;
@@ -253,7 +244,7 @@ body {
 .header ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     font-size: 25px;
 }
 
@@ -302,7 +293,7 @@ body {
 }
 
 .header ul li ul li a {
-    font-family: 'Source Serif Pro', serif;
+    font-family: "Source Serif Pro", serif;
     font-size: 15px;
     text-align: center;
     padding: 10px 0;
@@ -319,9 +310,9 @@ body {
 
 .informativo {
     display: flex;
-    margin: 60px auto;
+    margin: 20px auto;
     width: 100%;
-    height: 500px;
+    height: 550px;
     justify-content: center;
     align-items: center;
 }
@@ -332,22 +323,112 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 
-.slide #slide1,
-.slide #slide2 {
+.slide-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 500px;
-    transition: all ease 7s;
 }
 
-#slidePrincipal,
-#slideEmEspera {
-    transform: translateX(50000px);
+#slide1 {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 7px 13px -3px, rgba(0, 0, 0, 0.4) 0px -3px 0px inset;
+    cursor: pointer;
+    animation: slideADD 0.7s ease-in-out;
 }
 
-#slidePrincipal.transformSlide {
-    transition: all ease 1s;
-    transform: translateX(150px);
+#slide1.transformSlide {
+    animation: slideADD 0.7s ease-in-out;
 }
 
-key
+#seta-esquerda {
+    /* position: absolute;
+    left: -10px; */
+    /* margin-right: 10px; */
+    /* margin: 10px; */
+}
+
+#seta-direita {
+    /* position: absolute;
+    right: 10px; */
+    /* margin-left: 10px; */
+}
+
+#seta-esquerda i,
+#seta-direita i {
+    height: 155px;
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    border-radius: 15px;
+    color: rgb(3, 2, 2);
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-color: #e7e6e66c;
+    margin: 0 25px 0 25px;
+    z-index: 95;
+}
+
+#seta-esquerda i:hover,
+#seta-direita i:hover {
+    transform: scale(1.1);
+    transition: 0.6s ease-in-out transform;
+    background: rgb(9, 22, 104);
+    background: linear-gradient( 90deg, rgba(9, 22, 104, 1) 0%, rgba(9, 39, 121, 1) 35%, rgba(9, 57, 137, 1) 100%);
+    color: white;
+}
+
+@keyframes slideADD {
+    0% {
+        opacity: 0;
+        transform: translateX(250px) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0.01;
+        width: 25%;
+        height: 25%;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes fadeinout {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: -150% 0;
+    }
+}
