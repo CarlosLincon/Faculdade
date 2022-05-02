@@ -23,7 +23,8 @@ const setaDireita = document.getElementById("seta-direita");
 const DivSlide1 = document.getElementsByClassName("slide-container");
 const slide1IMG = document.getElementById("slide1");
 var valorCLick = 1;
-var MaxIMG;
+var MaxIMG = 1;
+var MaxIsTrue = "true";
 // End Informativo
 
 // atribuições de classe posteriormente ao carregamento
@@ -31,6 +32,7 @@ window.onload = function() {
     img.classList.add("transformOp");
     alunoMenu.classList.add("transformOp");
     // DivSlide1[0].classList.add("transformSlide");
+    checkMaxIMG();
 };
 //menu effects
 graduaçãoLi.addEventListener("mouseover", () => {
@@ -138,6 +140,25 @@ function checkIMGDI(valor) {
 }
 
 function checkMaxIMG() {
-    let img = new Image();
-    img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
+
+
+    console.log(MaxIsTrue);
+    for (var i = 1; MaxIsTrue === "true"; i++) {
+        let img = new Image();
+        img.setAttribute("src", `Images/Slide/Slide(${i}).jpg`);
+        let onerrorCallback = function() {
+            if (i == 1) {
+                MaxIMG = i;
+                MaxIsTrue = "false";
+            } else {
+                MaxIMG = i - 1;
+                MaxIsTrue = "false";
+            }
+        };
+
+        img.onerror = onerrorCallback;
+
+        console.log(i);
+    }
+    console.log(MaxIMG);
 }
