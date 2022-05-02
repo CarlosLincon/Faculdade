@@ -310,7 +310,7 @@ body {
 
 .informativo {
     display: flex;
-    margin: 20px auto;
+    margin: 50px auto;
     width: 100%;
     height: 550px;
     justify-content: center;
@@ -341,11 +341,15 @@ body {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 7px 13px -3px, rgba(0, 0, 0, 0.4) 0px -3px 0px inset;
     cursor: pointer;
+    user-select: none;
+}
+
+#slide1.SlideADD {
     animation: slideADD 0.7s ease-in-out;
 }
 
-#slide1.transformSlide {
-    animation: slideADD 0.7s ease-in-out;
+#slide1.SlideRE {
+    animation: slideRE 0.7s ease-in-out;
 }
 
 #seta-esquerda {
@@ -391,6 +395,17 @@ body {
     0% {
         opacity: 0;
         transform: translateX(250px) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes slideRE {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px) translateY(0);
     }
     100% {
         opacity: 1;

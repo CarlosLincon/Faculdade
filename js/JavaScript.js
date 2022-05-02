@@ -22,16 +22,15 @@ const setaEsquerda = document.getElementById("seta-esquerda");
 const setaDireita = document.getElementById("seta-direita");
 const DivSlide1 = document.getElementsByClassName("slide-container");
 const slide1IMG = document.getElementById("slide1");
-var clickDI = 1,
-    clickES = 0;
-
+var valorCLick = 1;
+var MaxIMG;
 // End Informativo
 
 // atribuições de classe posteriormente ao carregamento
 window.onload = function() {
     img.classList.add("transformOp");
     alunoMenu.classList.add("transformOp");
-    DivSlide1[0].classList.add("transformSlide");
+    // DivSlide1[0].classList.add("transformSlide");
 };
 //menu effects
 graduaçãoLi.addEventListener("mouseover", () => {
@@ -82,27 +81,63 @@ for (var i = 0; i < menuOff.length; i++) {
 
 //Slide-Informativo
 
+setaEsquerda.addEventListener("click", () => {
+    valorCLick--;
+    slide1IMG.classList.remove("SlideRE");
+    slide1IMG.classList.remove("SlideADD");
+    checkIMGES(valorCLick);
+});
+
 setaDireita.addEventListener("click", () => {
-    clickDI++;
-    checkIMG(clickDI);
+    valorCLick++;
+    slide1IMG.classList.remove("SlideRE");
+    slide1IMG.classList.remove("SlideADD");
+    checkIMGDI(valorCLick);
 });
 
 // Funçôes
 
-function checkIMG(valor) {
-    console.log(clickDI);
+function checkIMGES(valor) {
     let img = new Image();
     img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
     let onerrorCallback = function() {
-        clickDI = 1;
-    };
-    let onloadCallback = function() {
-        let srclet = `Images/Slide/Slide(${valor}).jpg`;
-        slide1IMG.classList.remove("transformSlide");
+        valorCLick = 1;
+        let srclet = `Images/Slide/Slide(${valorCLick}).jpg`;
+        slide1IMG.classList.add("SlideRE");
         slide1IMG.src = srclet;
-        slide1IMG.classList.add("transformSlide");
+    };
+
+    let onloadCallback = function() {
+        srclet = `Images/Slide/Slide(${valor}).jpg`;
+        slide1IMG.src = srclet;
+        slide1IMG.classList.add("SlideRE");
     };
 
     img.onerror = onerrorCallback;
     img.onload = onloadCallback;
+}
+
+function checkIMGDI(valor) {
+    console.log(valorCLick);
+    let img = new Image();
+    img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
+    let onerrorCallback = function() {
+        valorCLick = 1;
+        let srclet = `Images/Slide/Slide(${valorCLick}).jpg`;
+        slide1IMG.classList.add("SlideADD");
+        slide1IMG.src = srclet;
+    };
+    let onloadCallback = function() {
+        srclet = `Images/Slide/Slide(${valor}).jpg`;
+        slide1IMG.src = srclet;
+        slide1IMG.classList.add("SlideADD");
+    };
+
+    img.onerror = onerrorCallback;
+    img.onload = onloadCallback;
+}
+
+function checkMaxIMG() {
+    let img = new Image();
+    img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
 }
