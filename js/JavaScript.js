@@ -23,8 +23,7 @@ const setaDireita = document.getElementById("seta-direita");
 const DivSlide1 = document.getElementsByClassName("slide-container");
 const slide1IMG = document.getElementById("slide1");
 var valorCLick = 1;
-var MaxIMG = 1;
-var MaxIsTrue = "true";
+
 // End Informativo
 
 // atribuições de classe posteriormente ao carregamento
@@ -32,7 +31,11 @@ window.onload = function() {
     img.classList.add("transformOp");
     alunoMenu.classList.add("transformOp");
     // DivSlide1[0].classList.add("transformSlide");
-  
+    var trueIMG = 99;
+    let contagem = 1;
+    var MaxImg;
+
+
 };
 //menu effects
 graduaçãoLi.addEventListener("mouseover", () => {
@@ -80,62 +83,3 @@ for (var i = 0; i < menuOff.length; i++) {
 }
 
 // end menu
-
-//Slide-Informativo
-
-setaEsquerda.addEventListener("click", () => {
-    valorCLick--;
-    slide1IMG.classList.remove("SlideRE");
-    slide1IMG.classList.remove("SlideADD");
-    checkIMGES(valorCLick);
-});
-
-setaDireita.addEventListener("click", () => {
-    valorCLick++;
-    slide1IMG.classList.remove("SlideRE");
-    slide1IMG.classList.remove("SlideADD");
-    checkIMGDI(valorCLick);
-});
-
-// Funçôes
-
-function checkIMGES(valor) {
-    let img = new Image();
-    img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
-    let onerrorCallback = function() {
-        valorCLick = 1;
-        let srclet = `Images/Slide/Slide(${valorCLick}).jpg`;
-        slide1IMG.classList.add("SlideRE");
-        slide1IMG.src = srclet;
-    };
-
-    let onloadCallback = function() {
-        srclet = `Images/Slide/Slide(${valor}).jpg`;
-        slide1IMG.src = srclet;
-        slide1IMG.classList.add("SlideRE");
-    };
-
-    img.onerror = onerrorCallback;
-    img.onload = onloadCallback;
-}
-
-function checkIMGDI(valor) {
-    console.log(valorCLick);
-    let img = new Image();
-    img.setAttribute("src", `Images/Slide/Slide(${valor}).jpg`);
-    let onerrorCallback = function() {
-        valorCLick = 1;
-        let srclet = `Images/Slide/Slide(${valorCLick}).jpg`;
-        slide1IMG.classList.add("SlideADD");
-        slide1IMG.src = srclet;
-    };
-    let onloadCallback = function() {
-        srclet = `Images/Slide/Slide(${valor}).jpg`;
-        slide1IMG.src = srclet;
-        slide1IMG.classList.add("SlideADD");
-    };
-
-    img.onerror = onerrorCallback;
-    img.onload = onloadCallback;
-}
-
