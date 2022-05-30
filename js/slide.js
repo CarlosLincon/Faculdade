@@ -1,11 +1,49 @@
 //Slide-Informativo
 const quantasImg = 4;
-const slideCtrl = document.querySelector(".ctrlSlide");
-var ball = [];
+// Váriaveis do Slide Informativo
+const setaEsquerda = document.querySelector("#setaEsquerda");
+const setaDireita = document.querySelector("#setaDireita");
+const DivSlide1 = document.querySelector(".slide-container");
+const slide1IMG = document.querySelector("#slide1");
+var valorCLick = 1;
 
-criandoElemento(ball, quantasImg, slideCtrl, "ball");
+console.log(setaEsquerda);
+// End Informativo
+
+slide1IMG.addEventListener("mouseover", () => {
+
+    setaEsquerda.classList.add("displayOn");
+    setaDireita.classList.add("displayOn");
+})
+
+slide1IMG.addEventListener("mouseout", () => {
+
+    setaEsquerda.classList.remove("displayOn");
+    setaDireita.classList.remove("displayOn");
+})
+
+setaEsquerda.addEventListener("mouseover", () => {
+
+    setaEsquerda.classList.add("displayOn");
+    setaDireita.classList.add("displayOn");
+})
+setaEsquerda.addEventListener("mouseout", () => {
+
+    setaEsquerda.classList.remove("displayOn");
+    setaDireita.classList.remove("displayOn");
+})
 
 
+setaDireita.addEventListener("mouseover", () => {
+
+    setaEsquerda.classList.add("displayOn");
+    setaDireita.classList.add("displayOn");
+})
+setaDireita.addEventListener("mouseout", () => {
+
+    setaEsquerda.classList.remove("displayOn");
+    setaDireita.classList.remove("displayOn");
+})
 
 
 setaEsquerda.addEventListener("click", () => {
@@ -25,17 +63,6 @@ setaDireita.addEventListener("click", () => {
 // Funçôes
 
 
-function criandoElemento(elemento, quantos, filho, classe) {
-
-    for (x = 1; x <= quantos; x++) {
-        elemento[x] = document.createElement("div");
-        elemento[x].classList.add(`${classe}`);
-        filho.appendChild(elemento[x]);
-    }
-
-
-
-}
 
 function checkIMGES(valor) {
     let img = new Image();

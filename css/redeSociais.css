@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
+#rede-sociais {
+    position: fixed;
+    background-image: linear-gradient( to left top, #3a7899 0%, #70afce 25%, #a5def1 50%, #ffffff 100%);
+    right: 10px;
+    bottom: 0px;
+    width: 200px;
+    /*height: 450px;
+    */
+    z-index: 99;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#rede-sociais #msg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+#rede-sociais p {
+    font-family: "Source Serif Pro", serif;
+    border-bottom: 2px solid #0ba512;
+}
+
+#rede-sociais img {
+    width: 32px;
+}

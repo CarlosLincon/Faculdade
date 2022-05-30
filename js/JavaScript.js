@@ -14,30 +14,31 @@ const element = document.getElementsByClassName("container-menu");
 const rect = element[0].getBoundingClientRect();
 const img = document.getElementById("IMG");
 const alunoMenu = document.getElementById("aluno-header");
-
+const logoMenu = document.querySelector(".logo-menu");
+const aluno = document.querySelector("#aluno-menu");
 // end menu
 
-// Váriaveis do Slide Informativo
-const setaEsquerda = document.getElementById("seta-esquerda");
-const setaDireita = document.getElementById("seta-direita");
-const DivSlide1 = document.getElementsByClassName("slide-container");
-const slide1IMG = document.getElementById("slide1");
-var valorCLick = 1;
 
-// End Informativo
 
 // atribuições de classe posteriormente ao carregamento
 window.onload = function() {
     img.classList.add("transformOp");
     alunoMenu.classList.add("transformOp");
-    // DivSlide1[0].classList.add("transformSlide");
-    var trueIMG = 99;
-    let contagem = 1;
-    var MaxImg;
-
-
 };
 //menu effects
+logoMenu.addEventListener("mouseover", () => {
+    graduaçãoUl.classList.remove("onDisplay");
+    academicoUl.classList.remove("onDisplay");
+    institucionalUl.classList.remove("onDisplay");
+});
+
+aluno.addEventListener("mouseover", () => {
+    graduaçãoUl.classList.remove("onDisplay");
+    academicoUl.classList.remove("onDisplay");
+    institucionalUl.classList.remove("onDisplay");
+});
+
+
 graduaçãoLi.addEventListener("mouseover", () => {
     graduaçãoUl.classList.add("onDisplay");
     academicoUl.classList.remove("onDisplay");
