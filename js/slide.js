@@ -7,7 +7,6 @@ const DivSlide1 = document.querySelector(".slide-container");
 const slide1IMG = document.querySelector("#slide1");
 var valorCLick = 1;
 
-console.log(setaEsquerda);
 // End Informativo
 
 slide1IMG.addEventListener("mouseover", () => {
@@ -61,8 +60,6 @@ setaDireita.addEventListener("click", () => {
 });
 
 // Funçôes
-
-
 
 function checkIMGES(valor) {
     let img = new Image();

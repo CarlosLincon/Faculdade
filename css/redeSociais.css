@@ -9,6 +9,8 @@
     */
     z-index: 99;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+    animation: redeFechando 0.7s ease;
 }
 
 #rede-sociais #msg {
@@ -27,4 +29,36 @@
 
 #rede-sociais img {
     width: 32px;
+}
+
+#rede-sociais.click {
+    animation: redeAbrindo 1 0.5s ease;
+    height: 450px;
+    width: 350px;
+}
+
+@keyframes redeAbrindo {
+    0% {
+        width: 50px;
+        height: 25px;
+        opacity: 0.1;
+    }
+    100% {
+        width: 350px;
+        height: 450px;
+        opacity: 1;
+    }
+}
+
+@keyframes redeFechando {
+    0% {
+        width: 350px;
+        height: 450px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 200px;
+        height: 55px;
+        opacity: 1;
+    }
 }
