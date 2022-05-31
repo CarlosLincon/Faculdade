@@ -25,16 +25,26 @@
 #rede-sociais p {
     font-family: "Source Serif Pro", serif;
     border-bottom: 2px solid #0ba512;
+    user-select: none;
 }
 
 #rede-sociais img {
     width: 32px;
+    user-select: none;
 }
 
 #rede-sociais.click {
     animation: redeAbrindo 1 0.5s ease;
     height: 450px;
     width: 350px;
+}
+
+#rede-sociais.click #msg {
+    justify-content: center;
+}
+
+#rede-sociais.click img {
+    margin-left: 15px;
 }
 
 @keyframes redeAbrindo {
