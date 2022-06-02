@@ -1,40 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* ===== Scrollbar CSS ===== */
-
-
-/* Firefox */
-
-* {
-    scrollbar-width: auto;
-    scrollbar-color: #022af2 #666666;
-}
-
-
-/* Chrome, Edge, and Safari */
-
-*::-webkit-scrollbar {
-    width: 16px;
-}
-
-*::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #022af2;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-}
-
 body {
+    display: flex;
     overflow-x: hidden;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .container {
@@ -49,7 +19,6 @@ body {
 .header {
     height: auto;
     width: 100%;
-    margin-bottom: 40px;
 }
 
 .header .logo-menu {

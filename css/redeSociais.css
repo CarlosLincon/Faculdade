@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
 #rede-sociais {
     position: fixed;
-    background-image: linear-gradient( to left top, #3a7899 0%, #70afce 25%, #a5def1 50%, #ffffff 100%);
     right: 10px;
     bottom: 0px;
-    width: 200px;
+    width: 32px;
     /*height: 450px;
     */
     z-index: 99;
@@ -15,14 +14,14 @@
 
 #rede-sociais #msg {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 55px;
+    height: 31px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 #rede-sociais p {
+    display: none;
     font-family: "Source Serif Pro", serif;
     user-select: none;
 }
@@ -35,7 +34,7 @@
 #rede-sociais.click {
     animation: redeAbrindo 1 0.5s ease;
     height: 450px;
-    width: 350px;
+    width: 250px;
 }
 
 #rede-sociais.click #msg {
@@ -43,38 +42,18 @@
 }
 
 #rede-sociais.click img {
-    margin-left: 15px;
+    padding-left: 15px;
 }
 
 #rede-sociais #msg.instagram {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     color: #ffffff;
-    background: #f09433;
-    background: -moz-linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
-#rede-sociais #msg.instagram p {}
+#rede-sociais #msg.whatsapp {}
 
 #rede-sociais #msg.facebook {
-    background: #3A5795;
     color: #ffffff;
-    background: linear-gradient(to bottom, #3A5795 0%, #2B4886 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3A5795), color-stop(100%, #2B4886));
-    background: -webkit-linear-gradient(top, #3A5795 0%, #2B4886 100%);
-    background: -moz-linear-gradient(top, #3A5795 0%, #2B4886 100%);
-    background: -o-linear-gradient(top, #3A5795 0%, #2B4886 100%);
-    background: -ms-linear-gradient(top, #3A5795 0%, #2B4886 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3A5795', endColorstr='#2B4886', GradientType=0);
-    border: 1px solid #1C3977;
-    text-shadow: 0 1px 0 #4966A4;
-    -webkit-text-shadow: 0 1px 0 #4966A4;
-    -moz-text-shadow: 0 1px 0 #4966A4;
-    box-shadow: inset 0 1px 0 #4966A4;
-    -webkit-box-shadow: inset 0 1px 0 #4966A4;
-    -moz-box-shadow: inset 0 1px 0 #4966A4;
 }
 
 #rede-sociais p {
@@ -88,7 +67,7 @@
         opacity: 0.1;
     }
     100% {
-        width: 350px;
+        width: 250px;
         height: 450px;
         opacity: 1;
     }
@@ -101,8 +80,8 @@
         opacity: 0.8;
     }
     100% {
-        width: 200px;
-        height: 55px;
+        width: 34px;
+        height: 31px;
         opacity: 1;
     }
 }
