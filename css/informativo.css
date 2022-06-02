@@ -17,12 +17,13 @@
 }
 
 #setaES {
-    background-color: #000000;
+    background-color: #0d0d0e10;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 220px;
+    background-color: blue;
     width: 110px;
     z-index: 10;
     left: 0;
@@ -34,12 +35,12 @@
 }
 
 #setaDT {
-    background-color: #000000;
+    height: 220px;
+    background-color: blue;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 110px;
     z-index: 10;
     right: 0;
