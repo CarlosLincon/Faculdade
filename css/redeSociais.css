@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
 #rede-sociais {
     position: fixed;
-    right: 10px;
-    bottom: 0px;
+    right: 35px;
+    bottom: 35px;
     width: 32px;
     /*height: 450px;
     */
@@ -43,21 +43,6 @@
 
 #rede-sociais.click img {
     padding-left: 15px;
-}
-
-#rede-sociais #msg.instagram {
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
-    color: #ffffff;
-}
-
-#rede-sociais #msg.whatsapp {}
-
-#rede-sociais #msg.facebook {
-    color: #ffffff;
-}
-
-#rede-sociais p {
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes redeAbrindo {

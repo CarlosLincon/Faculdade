@@ -1,10 +1,10 @@
 //Slide-Informativo
 const quantasImg = 4;
 // Váriaveis do Slide Informativo
-const setaEsquerda = document.querySelector("#setaEsquerda");
-const setaDireita = document.querySelector("#setaDireita");
-const DivSlide1 = document.querySelector(".slide-container");
-const slide1IMG = document.querySelector("#slide1");
+const setaEsquerda = document.querySelector("#setaES");
+const setaDireita = document.querySelector("#setaDT");
+const DivSlide1 = document.querySelector("#slideInformativo");
+const slide1IMG = document.querySelector("#slideDoInformativo");
 var valorCLick = 1;
 
 // End Informativo
