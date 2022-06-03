@@ -21,10 +21,7 @@ const aluno = document.querySelector("#aluno-menu");
 
 
 // atribuições de classe posteriormente ao carregamento
-window.onload = function() {
-    img.classList.add("transformOp");
-    alunoMenu.classList.add("transformOp");
-};
+
 //menu effects
 logoMenu.addEventListener("mouseover", () => {
     graduaçãoUl.classList.remove("onDisplay");

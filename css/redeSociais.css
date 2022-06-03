@@ -1,59 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
 #rede-sociais {
-    position: fixed;
-    right: 35px;
-    bottom: 35px;
-    width: 32px;
-    /*height: 450px;
-    */
-    z-index: 99;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    cursor: pointer;
-    animation: redeFechando 0.7s ease;
-}
-
-#rede-sociais #msg {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 31px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    user-select: none;
 }
 
-#rede-sociais p {
+#rede-sociais.abrindo {
+    animation: redeAbrindo 1 0.4s;
+}
+
+#rede-sociais.fechando {
+    animation: redeFechando 1 0.4s;
+}
+
+#redeHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#redeHeader i {
+    font-size: 30px;
+    color: rgb(33, 1, 212);
+}
+
+#redeHeader #redeHDmensagem p,
+#rede-sociais .msg ul {
     display: none;
-    font-family: "Source Serif Pro", serif;
-    user-select: none;
-}
-
-#rede-sociais img {
-    width: 32px;
-    user-select: none;
 }
 
 #rede-sociais.click {
-    animation: redeAbrindo 1 0.5s ease;
-    height: 450px;
-    width: 250px;
+    display: block;
+    width: 350px;
+    height: 400px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 
-#rede-sociais.click #msg {
+#rede-sociais.click #redeHeader {
+    display: flex;
     justify-content: center;
+    text-align: center;
+    height: 65px;
+    width: 100%;
+    background-color: #f8f8ff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
-#rede-sociais.click img {
-    padding-left: 15px;
+#rede-sociais.click #redeHeader i {
+    display: none;
+}
+
+#rede-sociais.click #redeHDmensagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rede-sociais.click #redeHDmensagem p {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#rede-sociais.click #redeHDmensagem p:last-child {}
+
+.msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rede-sociais.click .msg ul {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.msg ul li {
+    display: flex;
+    align-items: center;
+    width: 275px;
+    height: 65px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.msg ul li img {
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.msg ul li i {
+    margin-left: 10px;
+    font-size: 38px;
+}
+
+.msg ul li p {
+    margin: 0 auto;
+}
+
+.msg ul li.whatsapp {
+    background: rgb(49, 228, 13);
+    background: -moz-linear-gradient(90deg, rgba(49, 228, 13, 1) 0%, rgba(34, 161, 9, 1) 75%);
+    background: -webkit-linear-gradient(90deg, rgba(49, 228, 13, 1) 0%, rgba(34, 161, 9, 1) 75%);
+    background: linear-gradient(90deg, rgba(49, 228, 13, 1) 0%, rgba(34, 161, 9, 1) 75%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#31e40d", endColorstr="#22a109", GradientType=1);
+    color: #f2f2f2;
+}
+
+.msg ul li.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: #f2f2f2;
+}
+
+.msg ul li.facebook {
+    background-color: #0e058d;
+    color: #f2f2f2;
+}
+
+.msg ul li.telefone {
+    background-color: #4e4e4e;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+.msg ul li.telefone i {
+    font-size: 32px;
 }
 
 @keyframes redeAbrindo {
     0% {
-        width: 50px;
-        height: 25px;
+        position: absolute;
+        width: 60px;
+        height: 60px;
         opacity: 0.1;
     }
     100% {
-        width: 250px;
-        height: 450px;
+        position: absolute;
+        width: 350px;
+        height: 400px;
         opacity: 1;
     }
 }
@@ -61,12 +160,12 @@
 @keyframes redeFechando {
     0% {
         width: 350px;
-        height: 450px;
+        height: 400px;
         opacity: 0.8;
     }
     100% {
-        width: 34px;
-        height: 31px;
+        width: 60px;
+        height: 60px;
         opacity: 1;
     }
 }
