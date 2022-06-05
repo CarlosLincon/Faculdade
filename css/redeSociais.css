@@ -4,9 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
     width: 60px;
     height: 60px;
-    position: fixed;
     background-color: #f2f2f2;
     border-radius: 100px;
     z-index: 1000;
@@ -28,6 +30,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 #redeHeader i {
@@ -86,7 +89,7 @@
 #rede-sociais.click .msg ul {
     display: block;
     list-style: none;
-    cursor: pointer;
+    
 }
 
 .msg ul li {
@@ -96,6 +99,7 @@
     height: 65px;
     border-radius: 5px;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .msg ul li img {
@@ -144,13 +148,13 @@
 
 @keyframes redeAbrindo {
     0% {
-        position: absolute;
+        
         width: 60px;
         height: 60px;
         opacity: 0.1;
     }
     100% {
-        position: absolute;
+        
         width: 350px;
         height: 400px;
         opacity: 1;

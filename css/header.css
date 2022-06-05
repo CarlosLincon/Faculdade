@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
-body {
-    display: flex;
-    overflow-x: hidden;
-    height: 100%;
-    flex-direction: column;
-}
+
 
 .container {
     margin: 0 auto;
