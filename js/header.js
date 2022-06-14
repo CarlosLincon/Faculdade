@@ -65,10 +65,15 @@ institucionalDiv.addEventListener("mouseout", () => {
 
 window.addEventListener("scroll", () => {
     var y = window.scrollY;
-    if (y >= 90) {
+    if (y >= alturaDoH1Curso) {
         element[0].id = "fixed";
     } else if (y < 90) {
         element[0].id = " ";
+    }
+    if (y >= alturaDoH1Curso - 10) {
+        H1Card.classList.add("SlideADDCard");
+    } else if (y < 400) {
+        H1Card.classList.remove("SlideADDCard");
     }
 });
 

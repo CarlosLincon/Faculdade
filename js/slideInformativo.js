@@ -63,16 +63,16 @@ setaDireita.addEventListener("click", () => {
 
 function checkIMGES(valor) {
     let img = new Image();
-    img.setAttribute("src", `Images/Slide/Slide(${valor}.png`);
+    img.setAttribute("src", `Images/Slide/Slide(${valor}).png`);
     let onerrorCallback = function() {
         valorCLick = quantasImg;
-        let srclet = `Images/Slide/Slide(${valorCLick}.png`;
+        let srclet = `Images/Slide/Slide(${valorCLick}).png`;
         slide1IMG.classList.add("SlideRE");
         slide1IMG.src = srclet;
     };
 
     let onloadCallback = function() {
-        srclet = `Images/Slide/Slide(${valor}.png`;
+        srclet = `Images/Slide/Slide(${valor}).png`;
         slide1IMG.src = srclet;
         slide1IMG.classList.add("SlideRE");
     };
@@ -84,15 +84,15 @@ function checkIMGES(valor) {
 function checkIMGDI(valor) {
     console.log(valorCLick);
     let img = new Image();
-    img.setAttribute("src", `Images/Slide/Slide(${valor}.png`);
+    img.setAttribute("src", `Images/Slide/Slide(${valor}).png`);
     let onerrorCallback = function() {
         valorCLick = 1;
-        let srclet = `Images/Slide/Slide(${valorCLick}.png`;
+        let srclet = `Images/Slide/Slide(${valorCLick}).png`;
         slide1IMG.classList.add("SlideADD");
         slide1IMG.src = srclet;
     };
     let onloadCallback = function() {
-        srclet = `Images/Slide/Slide(${valor}.png`;
+        srclet = `Images/Slide/Slide(${valor}).png`;
         slide1IMG.src = srclet;
         slide1IMG.classList.add("SlideADD");
     };
